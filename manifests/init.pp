@@ -10,4 +10,9 @@ class ntp {
     ensure => running;
   }
 
+  file { '/etc/ntp.conf':
+    ensure  => file,
+    content => epp('ntp/ntp.conf.epp'),
+  } ~> Service['ntpd']
+
 }
