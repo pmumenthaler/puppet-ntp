@@ -1,4 +1,6 @@
 class ntp {
+  
+  $ntpserver = hiera('ntp-server')	
 
   package {'ntp':
     ensure => latest;
