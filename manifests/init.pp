@@ -2,7 +2,6 @@ class ntp (
   Array[String] $servers
 )
   {
-class ntp {
   package {'ntp':
     ensure => latest;
   }
